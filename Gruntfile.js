@@ -28,7 +28,7 @@ module.exports = function(grunt) {
 
             html:'dist/**/*.html'
         },
-        
+
         imagemin: {
             public: {
               expand: true,
@@ -58,6 +58,16 @@ module.exports = function(grunt) {
 
             }
 
+        },
+
+        jshint: {
+
+            js:{
+
+                src:['public/js/**/*.js']
+                
+            }
+
         }
 
     });
@@ -77,5 +87,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-usemin'); 
     grunt.loadNpmTasks('grunt-contrib-imagemin'); 
     grunt.loadNpmTasks('grunt-rev'); 
+    grunt.loadNpmTasks('grunt-contrib-jshint');
     
 }
