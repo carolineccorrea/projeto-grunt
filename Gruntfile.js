@@ -32,7 +32,7 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('dist',['clean','copy']);
-    grunt.registerTask('minifica',['useminPrepare','concat','uglify','cssmin','usemin']);
+    grunt.registerTask('minifica',['useminPrepare','concat','uglify','cssmin','usemin','imagemin']);
 
 
     grunt.registerTask('default', ['dist', 'minifica']);
@@ -44,4 +44,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-usemin');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
 }
